@@ -11,7 +11,7 @@ export const Container = styled.div`
 
     .list--row {
         display:flex;
-        width: 99999px;
+        transition: all ease 0.5s;
     }
 
     .list--item {
@@ -27,6 +27,43 @@ export const Container = styled.div`
             &:hover {
                 transform: scale(1);
             }
+        }
+    }
+
+    .movieArrow-left,
+    .movieArrow-right {
+        color: #FFF;
+        font-size: 50px;
+        position: absolute;
+        widht: 40px;
+        height: 225px;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: rgba( 0, 0, 0, 0.6);
+        opacity: 0;
+        transition: all ease 0.5s;
+    }
+
+    .movieArrow-lef{
+        left: 0
+    }
+
+    .movieArrow-right {
+        right: 0
+    }
+
+    &:hover .movieArrow-left,
+    &:hover .movieArrow-right {
+        opacity: 1;
+    }
+
+    @media (max-width: 760px) {
+        .movieArrow-left,
+        .movieArrow-right {
+            opacity: 1;
         }
     }
 `

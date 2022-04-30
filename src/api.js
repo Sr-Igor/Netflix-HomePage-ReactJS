@@ -6,7 +6,7 @@ const basicFetch = async (endpoint) => {
     let response = await fetch(`${BASE_URL}${endpoint}`);
     let json = await response.json();
     return json;
-}
+};
 
 
  export const Api = {
@@ -70,7 +70,7 @@ const basicFetch = async (endpoint) => {
             }
         return info
     }
-}
+};
 
 
 
